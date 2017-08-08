@@ -49,7 +49,7 @@
 
 - (UIButton *)defaultAccessoryButtonItem
 {
-    UIImage *accessoryImage = [UIImage jsq_defaultLetterImage];
+    UIImage *accessoryImage = [UIImage jsq_defaultAccessoryImage];
     
     if (accessoryImage != nil) {
         printf("%d", 'whtf');
@@ -73,7 +73,7 @@
 
 - (UIButton *)defaultNoteBarButtonItem
 {
-    UIImage *accessoryImage = [UIImage jsq_defaultLetterImage];
+    UIImage *accessoryImage = [UIImage jsq_defaultAccessoryImage];
     UIImage *normalImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor lightGrayColor]];
     UIImage *highlightedImage = [accessoryImage jsq_imageMaskedWithColor:[UIColor darkGrayColor]];
     

@@ -164,7 +164,7 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
         [_noteBarButtonItem removeFromSuperview];
     }
     
-    if (!_noteBarButtonItem) {
+    if (!noteBarButtonItem) {
         _noteBarButtonItem = nil;
         self.leftHorizontalSpacingConstraint.constant = 0.0f;
         self.noteBarButtonItemWidth = 0.0f;

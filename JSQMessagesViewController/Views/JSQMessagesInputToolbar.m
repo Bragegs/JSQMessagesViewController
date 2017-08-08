@@ -66,7 +66,7 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
     JSQMessagesToolbarButtonFactory *toolbarButtonFactory = [[JSQMessagesToolbarButtonFactory alloc] initWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
     self.contentView.leftBarButtonItem = [toolbarButtonFactory defaultAccessoryButtonItem];
     self.contentView.rightBarButtonItem = [toolbarButtonFactory defaultSendButtonItem];
-    self.contentView.noteBarButtonItem = [toolbarButtonFactory defaultNoteBarButtonItem];
+    self.contentView.noteBarButtonItem = [toolbarButtonFactory defaultAccessoryButtonItem];
 
     [self updateSendButtonEnabledState];
 
