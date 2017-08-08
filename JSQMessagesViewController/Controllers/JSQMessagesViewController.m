@@ -722,6 +722,24 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     return 0.0f;
 }
 
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForVideoQuestionMessageAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 0.0f;
+}
+
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForStatusChangeMessageAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 0.0f;
+}
+
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForAppliedMessageAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 0.0f;
+}
+
 - (void)collectionView:(JSQMessagesCollectionView *)collectionView
  didTapAvatarImageView:(UIImageView *)avatarImageView
            atIndexPath:(NSIndexPath *)indexPath { }

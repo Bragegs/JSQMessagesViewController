@@ -75,6 +75,24 @@
     _cellBottomLabelHeight = [self jsq_correctedLabelHeightForHeight:cellBottomLabelHeight];
 }
 
+- (void)setVideoQuestionMessageCellHeight:(CGFloat)videoQuestionMessageHeight
+{
+    NSParameterAssert(videoQuestionMessageHeight >= 0.0f);
+    _videoQuestionMessageHeight = videoQuestionMessageHeight;
+}
+
+- (void)setStatusChangeMessageCellHeight:(CGFloat)statusChangeMessageHeight
+{
+    NSParameterAssert(statusChangeMessageHeight >= 0.0f);
+    _statusChangeMessageHeight = statusChangeMessageHeight;
+}
+
+- (void)setAppliedMessageCellHeight:(CGFloat)appliedMessageHeight
+{
+    NSParameterAssert(appliedMessageHeight >= 0.0f);
+    _appliedMessageHeight = appliedMessageHeight;
+}
+
 #pragma mark - Utilities
 
 - (CGSize)jsq_correctedAvatarSizeFromSize:(CGSize)size

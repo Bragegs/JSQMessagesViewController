@@ -105,6 +105,31 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (assign, nonatomic) CGFloat cellBottomLabelHeight;
 
+/**
+ *  The height of the `cellBottomLabel` of a `JSQMessagesCollectionViewCell`.
+ *  This value should be greater than or equal to `0.0`.
+ *
+ *  @see JSQMessagesCollectionViewCell.
+ */
+@property (assign, nonatomic) CGFloat videoQuestionMessageHeight;
+
+/**
+ *  The height of the `cellBottomLabel` of a `JSQMessagesCollectionViewCell`.
+ *  This value should be greater than or equal to `0.0`.
+ *
+ *  @see JSQMessagesCollectionViewCell.
+ */
+@property (assign, nonatomic) CGFloat statusChangeMessageHeight;
+
+/**
+ *  The height of the `cellBottomLabel` of a `JSQMessagesCollectionViewCell`.
+ *  This value should be greater than or equal to `0.0`.
+ *
+ *  @see JSQMessagesCollectionViewCell.
+ */
+@property (assign, nonatomic) CGFloat appliedMessageHeight;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

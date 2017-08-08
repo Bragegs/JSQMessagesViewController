@@ -454,6 +454,19 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
     layoutAttributes.cellBottomLabelHeight = [self.collectionView.delegate collectionView:self.collectionView
                                                                                    layout:self
                                                       heightForCellBottomLabelAtIndexPath:indexPath];
+    
+    layoutAttributes.videoQuestionMessageHeight = [self.collectionView.delegate collectionView:self.collectionView
+                                                                                   layout:self
+                                                      heightForVideoQuestionMessageAtIndexPath:indexPath];
+    
+    layoutAttributes.statusChangeMessageHeight = [self.collectionView.delegate collectionView:self.collectionView
+                                                                                        layout:self
+                                                      heightForStatusChangeMessageAtIndexPath:indexPath];
+    
+    layoutAttributes.appliedMessageHeight = [self.collectionView.delegate collectionView:self.collectionView
+                                                                                       layout:self
+                                                      heightForAppliedMessageAtIndexPath:indexPath];
+
 }
 
 #pragma mark - Spring behavior utilities

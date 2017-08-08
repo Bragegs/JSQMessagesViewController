@@ -78,6 +78,50 @@ NS_ASSUME_NONNULL_BEGIN
                    layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForCellBottomLabelAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
+ *  Asks the delegate for the height of the `VideoQuestionMessage` for the item at the specified indexPath.
+ *
+ *  @param collectionView       The collection view object displaying the flow layout.
+ *  @param collectionViewLayout The layout object requesting the information.
+ *  @param indexPath            The index path of the item.
+ *
+ *  @return The height of the `VideoQuestionMessage` for the item at indexPath.
+ *
+ *  @see JSQMessagesCollectionViewCell.
+ */
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForVideoQuestionMessageAtIndexPath:(NSIndexPath *)indexPath;
+
+/**
+ *  Asks the delegate for the height of the `StatusChangeMessage` for the item at the specified indexPath.
+ *
+ *  @param collectionView       The collection view object displaying the flow layout.
+ *  @param collectionViewLayout The layout object requesting the information.
+ *  @param indexPath            The index path of the item.
+ *
+ *  @return The height of the `StatusChangeMessage` for the item at indexPath.
+ *
+ *  @see JSQMessagesCollectionViewCell.
+ */
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForStatusChangeMessageAtIndexPath:(NSIndexPath *)indexPath;
+
+
+/**
+ *  Asks the delegate for the height of the `AppliedMessage` for the item at the specified indexPath.
+ *
+ *  @param collectionView       The collection view object displaying the flow layout.
+ *  @param collectionViewLayout The layout object requesting the information.
+ *  @param indexPath            The index path of the item.
+ *
+ *  @return The height of the `AppliedMessage` for the item at indexPath.
+ *
+ *  @see JSQMessagesCollectionViewCell.
+ */
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForAppliedMessageAtIndexPath:(NSIndexPath *)indexPath;
+
+
+/**
  *  Notifies the delegate that the avatar image view at the specified indexPath did receive a tap event.
  *
  *  @param collectionView  The collection view object that is notifying the delegate of the tap event.
