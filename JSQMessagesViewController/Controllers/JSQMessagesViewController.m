@@ -723,19 +723,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 }
 
 - (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
-                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForVideoQuestionMessageAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 0.0f;
-}
-
-- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
-                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForStatusChangeMessageAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 0.0f;
-}
-
-- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
-                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForAppliedMessageAtIndexPath:(NSIndexPath *)indexPath
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightEventMessageAtIndexPath:(NSIndexPath *)indexPath
 {
     return 0.0f;
 }

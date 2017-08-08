@@ -42,6 +42,7 @@
     attrs.cellTopLabelHeight = 20.0f;
     attrs.messageBubbleTopLabelHeight = 10.0f;
     attrs.cellBottomLabelHeight = 15.0f;
+    attrs.eventMessageHeight = 0.0f;
     XCTAssertNotNil(attrs, @"Layout attributes should not be nil");
     
     JSQMessagesCollectionViewLayoutAttributes *copy = [attrs copy];

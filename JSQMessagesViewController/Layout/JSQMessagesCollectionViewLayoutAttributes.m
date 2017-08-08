@@ -75,23 +75,12 @@
     _cellBottomLabelHeight = [self jsq_correctedLabelHeightForHeight:cellBottomLabelHeight];
 }
 
-- (void)setVideoQuestionMessageCellHeight:(CGFloat)videoQuestionMessageHeight
+- (void)setEventMessageCellHeight:(CGFloat)eventMessageHeight
 {
-    NSParameterAssert(videoQuestionMessageHeight >= 0.0f);
-    _videoQuestionMessageHeight = videoQuestionMessageHeight;
+    NSParameterAssert(eventMessageHeight >= 0.0f);
+    _eventMessageHeight = eventMessageHeight;
 }
 
-- (void)setStatusChangeMessageCellHeight:(CGFloat)statusChangeMessageHeight
-{
-    NSParameterAssert(statusChangeMessageHeight >= 0.0f);
-    _statusChangeMessageHeight = statusChangeMessageHeight;
-}
-
-- (void)setAppliedMessageCellHeight:(CGFloat)appliedMessageHeight
-{
-    NSParameterAssert(appliedMessageHeight >= 0.0f);
-    _appliedMessageHeight = appliedMessageHeight;
-}
 
 #pragma mark - Utilities
 
@@ -128,7 +117,8 @@
             || (int)layoutAttributes.messageBubbleContainerViewWidth != (int)self.messageBubbleContainerViewWidth
             || (int)layoutAttributes.cellTopLabelHeight != (int)self.cellTopLabelHeight
             || (int)layoutAttributes.messageBubbleTopLabelHeight != (int)self.messageBubbleTopLabelHeight
-            || (int)layoutAttributes.cellBottomLabelHeight != (int)self.cellBottomLabelHeight) {
+            || (int)layoutAttributes.cellBottomLabelHeight != (int)self.cellBottomLabelHeight
+            || (int)layoutAttributes.eventMessageHeight != (int)self.eventMessageHeight) {
             return NO;
         }
     }
@@ -160,6 +150,7 @@
     copy.cellTopLabelHeight = self.cellTopLabelHeight;
     copy.messageBubbleTopLabelHeight = self.messageBubbleTopLabelHeight;
     copy.cellBottomLabelHeight = self.cellBottomLabelHeight;
+    copy.eventMessageHeight = self.eventMessageHeight;
     
     return copy;
 }
