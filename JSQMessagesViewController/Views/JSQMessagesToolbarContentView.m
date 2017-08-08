@@ -177,11 +177,11 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
     
     [noteBarButtonItem setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self.leftBarButtonContainerView addSubview:noteBarButtonItem];
-    [self.leftBarButtonContainerView jsq_pinAllEdgesOfSubview:noteBarButtonItem];
+    [self.noteBarButtonItemContainerView addSubview:noteBarButtonItem];
+    [self.noteBarButtonItemContainerView jsq_pinAllEdgesOfSubview:noteBarButtonItem];
     [self setNeedsUpdateConstraints];
     
-    _leftBarButtonItem = noteBarButtonItem;
+    _noteBarButtonItem = noteBarButtonItem;
 }
 
 - (void)setNoteBarButtonItemWidth:(CGFloat)noteBarButtonItemWidth
