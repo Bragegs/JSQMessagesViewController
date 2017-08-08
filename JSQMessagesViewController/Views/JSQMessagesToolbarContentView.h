@@ -113,6 +113,36 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingD
  */
 @property (weak, nonatomic, readonly, nullable) UIView *rightBarButtonContainerView;
 
+
+@property (weak, nonatomic) IBOutlet UIView *noteBarButtonItemContainerView;
+
+/**
+ *  A custom note bar button item displayed on the left of the toolbar content view.
+ *
+ *  @discussion The frame height of this button is ignored. When you set this property, the button
+ *  is fitted within a pre-defined default content view, the leftBarButtonContainerView,
+ *  whose height is determined by the height of the toolbar. However, the width of this button
+ *  will be preserved. You may specify a new width using `leftBarButtonItemWidth`.
+ *  If the frame of this button is equal to `CGRectZero` when set, then a default frame size will be used.
+ *  Set this value to `nil` to remove the button.
+ */
+@property (weak, nonatomic, nullable) UIButton *noteBarButtonItem;
+
+/**
+ *  Specifies the width of the leftBarButtonItem.
+ *
+ *  @discussion This property modifies the width of the leftBarButtonContainerView.
+ */
+@property (assign, nonatomic) CGFloat noteBarButtonItemWidth;
+
+/**
+ *  Specifies the amount of spacing between the content view and the leading edge of leftBarButtonItem.
+ *
+ *  @discussion The default value is `8.0f`.
+ */
+@property (assign, nonatomic) CGFloat noteBarContentPadding;
+
+
 #pragma mark - Class methods
 
 /**

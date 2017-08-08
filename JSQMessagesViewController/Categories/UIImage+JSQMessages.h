@@ -90,6 +90,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIImage *)jsq_shareActionImage;
 
+/**
+ *  @return The default input toolbar letter image.
+ */
++ (UIImage *)jsq_defaultLetterImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

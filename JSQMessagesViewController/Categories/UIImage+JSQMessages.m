@@ -109,4 +109,9 @@
 {
     return [UIImage jsq_bubbleImageFromBundleWithName:@"share"];
 }
+
++ (UIImage *)jsq_defaultLetterImage
+{
+    return [UIImage jsq_bubbleImageFromBundleWithName:@"letter"];
+}
 @end

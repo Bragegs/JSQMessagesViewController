@@ -61,6 +61,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (UIButton *)defaultSendButtonItem;
 
+/**
+ *  Creates and returns a new button that is styled the note button.
+ *  The button has image and no text.
+ *
+ *  @return A newly created button.
+ */
+- (UIButton *)defaultNoteBarButtonItem;
+
 @end
 
 NS_ASSUME_NONNULL_END
