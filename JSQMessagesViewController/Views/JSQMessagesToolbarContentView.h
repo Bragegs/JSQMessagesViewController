@@ -104,7 +104,7 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingD
 @property (assign, nonatomic) CGFloat rightContentPadding;
 
 /**
- *  The container view for the rightBarButtonItem.
+ *  The container view for the noteBarButtonItem.
  *
  *  @discussion 
  *  You may use this property to add additional button items to the right side of the toolbar content view.
@@ -114,7 +114,7 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingD
 @property (weak, nonatomic, readonly, nullable) UIView *rightBarButtonContainerView;
 
 
-@property (weak, nonatomic) IBOutlet UIView *noteBarButtonItemContainerView;
+@property (weak, nonatomic, readonly, nullable) UIView *noteBarButtonContainerView;
 
 /**
  *  A custom note bar button item displayed on the left of the toolbar content view.

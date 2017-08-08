@@ -165,24 +165,30 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
                 [self.contentView.leftBarButtonItem addTarget:self
                                                        action:@selector(jsq_leftBarButtonPressed:)
                                              forControlEvents:UIControlEventTouchUpInside];
+
                 
-                [self.contentView.noteBarButtonItem addTarget:self
-                                                       action:@selector(jsq_noteBarButtonPressed:)
-                                             forControlEvents:UIControlEventTouchUpInside];
             }
             else if ([keyPath isEqualToString:NSStringFromSelector(@selector(rightBarButtonItem))]) {
 
                 [self.contentView.rightBarButtonItem removeTarget:self
                                                            action:NULL
                                                  forControlEvents:UIControlEventTouchUpInside];
+                
 
                 [self.contentView.rightBarButtonItem addTarget:self
                                                         action:@selector(jsq_rightBarButtonPressed:)
                                               forControlEvents:UIControlEventTouchUpInside];
                 
+
+            }
+            else if ([keyPath isEqualToString:NSStringFromSelector(@selector(noteBarButtonItem))]) {
+                [self.contentView.noteBarButtonItem removeTarget:self
+                                                           action:NULL
+                                                 forControlEvents:UIControlEventTouchUpInside];
+                
                 [self.contentView.noteBarButtonItem addTarget:self
-                                                        action:@selector(jsq_noteBarButtonPressed:)
-                                              forControlEvents:UIControlEventTouchUpInside];
+                                                       action:@selector(jsq_noteBarButtonPressed:)
+                                             forControlEvents:UIControlEventTouchUpInside];
             }
 
             [self updateSendButtonEnabledState];

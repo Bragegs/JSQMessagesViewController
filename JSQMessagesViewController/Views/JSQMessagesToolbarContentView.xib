@@ -71,7 +71,8 @@
                 <outlet property="leftBarButtonContainerView" destination="LEq-G7-jGt" id="F0V-4N-1Mo"/>
                 <outlet property="leftBarButtonContainerViewWidthConstraint" destination="eMy-Af-wwH" id="FI9-F2-2bN"/>
                 <outlet property="leftHorizontalSpacingConstraint" destination="LAU-fo-GJJ" id="X2c-BI-0Q4"/>
-                <outlet property="noteBarButtonItemContainerView" destination="djj-5x-IEq" id="f4y-Qw-5qx"/>
+                <outlet property="noteBarButtonContainerView" destination="djj-5x-IEq" id="juN-02-ame"/>
+                <outlet property="noteBarButtonContainerViewWidthConstant" destination="hHf-RV-MhG" id="OAf-Ja-5Ng"/>
                 <outlet property="rightBarButtonContainerView" destination="Myo-1S-Vg1" id="0SR-cw-EkD"/>
                 <outlet property="rightBarButtonContainerViewWidthConstraint" destination="yde-S9-dHe" id="WGu-df-M3L"/>
                 <outlet property="rightHorizontalSpacingConstraint" destination="ds6-61-GNv" id="ZQh-8M-QFs"/>

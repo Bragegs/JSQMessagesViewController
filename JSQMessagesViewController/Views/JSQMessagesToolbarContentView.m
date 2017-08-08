@@ -33,6 +33,11 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
 @property (weak, nonatomic) IBOutlet UIView *rightBarButtonContainerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightBarButtonContainerViewWidthConstraint;
 
+@property (weak, nonatomic) IBOutlet UIView *noteBarButtonContainerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *noteBarButtonContainerViewWidthConstant;
+
+
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftHorizontalSpacingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightHorizontalSpacingConstraint;
 
@@ -75,7 +80,7 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
     [super setBackgroundColor:backgroundColor];
     self.leftBarButtonContainerView.backgroundColor = backgroundColor;
     self.rightBarButtonContainerView.backgroundColor = backgroundColor;
-    self.noteBarButtonItemContainerView.backgroundColor = backgroundColor;
+    self.noteBarButtonContainerView.backgroundColor = backgroundColor;
     
 }
 
@@ -163,22 +168,22 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
         _noteBarButtonItem = nil;
         self.leftHorizontalSpacingConstraint.constant = 0.0f;
         self.noteBarButtonItemWidth = 0.0f;
-        self.noteBarButtonItemContainerView.hidden = YES;
+        self.noteBarButtonContainerView.hidden = YES;
         return;
     }
     
     if (CGRectEqualToRect(noteBarButtonItem.frame, CGRectZero)) {
-        noteBarButtonItem.frame = self.noteBarButtonItemContainerView.bounds;
+        noteBarButtonItem.frame = self.noteBarButtonContainerView.bounds;
     }
     
-    self.noteBarButtonItemContainerView.hidden = NO;
+    self.noteBarButtonContainerView.hidden = NO;
     self.leftHorizontalSpacingConstraint.constant = kJSQMessagesToolbarContentViewHorizontalSpacingDefault;
     self.noteBarButtonItemWidth = CGRectGetWidth(noteBarButtonItem.frame);
     
     [noteBarButtonItem setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self.noteBarButtonItemContainerView addSubview:noteBarButtonItem];
-    [self.noteBarButtonItemContainerView jsq_pinAllEdgesOfSubview:noteBarButtonItem];
+    [self.noteBarButtonContainerView addSubview:noteBarButtonItem];
+    [self.noteBarButtonContainerView jsq_pinAllEdgesOfSubview:noteBarButtonItem];
     [self setNeedsUpdateConstraints];
     
     _noteBarButtonItem = noteBarButtonItem;
@@ -186,7 +191,7 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
 
 - (void)setNoteBarButtonItemWidth:(CGFloat)noteBarButtonItemWidth
 {
-    self.leftBarButtonContainerViewWidthConstraint.constant = noteBarButtonItemWidth;
+    self.noteBarButtonContainerViewWidthConstant.constant = noteBarButtonItemWidth;
     [self setNeedsUpdateConstraints];
 }
 
@@ -212,6 +217,11 @@ const CGFloat kJSQMessagesToolbarContentViewHorizontalSpacingDefault = 8.0f;
 - (CGFloat)rightBarButtonItemWidth
 {
     return self.rightBarButtonContainerViewWidthConstraint.constant;
+}
+
+- (CGFloat)noteBarButtonItemWidth
+{
+    return self.noteBarButtonContainerViewWidthConstant.constant;
 }
 
 - (CGFloat)rightContentPadding
