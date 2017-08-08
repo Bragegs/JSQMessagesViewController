@@ -116,6 +116,11 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
     [self.delegate messagesInputToolbar:self didPressRightBarButton:sender];
 }
 
+- (void)jsq_noteBarButtonPressed:(UIButton *)sender
+{
+    [self.delegate messagesInputToolbar:self didPressNoteBarButton:sender];
+}
+
 #pragma mark - Input toolbar
 
 - (void)updateSendButtonEnabledState
@@ -160,6 +165,10 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
                 [self.contentView.leftBarButtonItem addTarget:self
                                                        action:@selector(jsq_leftBarButtonPressed:)
                                              forControlEvents:UIControlEventTouchUpInside];
+                
+                [self.contentView.noteBarButtonItem addTarget:self
+                                                       action:@selector(jsq_noteBarButtonPressed:)
+                                             forControlEvents:UIControlEventTouchUpInside];
             }
             else if ([keyPath isEqualToString:NSStringFromSelector(@selector(rightBarButtonItem))]) {
 
@@ -169,6 +178,10 @@ static void * kJSQMessagesInputToolbarKeyValueObservingContext = &kJSQMessagesIn
 
                 [self.contentView.rightBarButtonItem addTarget:self
                                                         action:@selector(jsq_rightBarButtonPressed:)
+                                              forControlEvents:UIControlEventTouchUpInside];
+                
+                [self.contentView.noteBarButtonItem addTarget:self
+                                                        action:@selector(jsq_noteBarButtonPressed:)
                                               forControlEvents:UIControlEventTouchUpInside];
             }
 

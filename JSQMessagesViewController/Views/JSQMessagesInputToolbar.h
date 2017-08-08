@@ -58,6 +58,16 @@ typedef NS_ENUM(NSUInteger, JSQMessagesInputSendButtonLocation) {
 - (void)messagesInputToolbar:(JSQMessagesInputToolbar *)toolbar
        didPressLeftBarButton:(UIButton *)sender;
 
+
+/**
+ *  Tells the delegate that the toolbar's `leftBarButtonItem` has been pressed.
+ *
+ *  @param toolbar The object representing the toolbar sending this information.
+ *  @param sender  The button that received the touch event.
+ */
+- (void)messagesInputToolbar:(JSQMessagesInputToolbar *)toolbar
+       didPressNoteBarButton:(UIButton *)sender;
+
 @end
 
 

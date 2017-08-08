@@ -762,6 +762,22 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     }
 }
 
+
+- (void)messagesInputToolbar:(JSQMessagesInputToolbar *)toolbar didPressNoteBarButton:(UIButton *)sender
+{
+    if (toolbar.sendButtonLocation == JSQMessagesInputSendButtonLocationLeft) {
+        [self didPressSendButton:sender
+                 withMessageText:[self jsq_currentlyComposedMessageText]
+                        senderId:[self.collectionView.dataSource senderId]
+               senderDisplayName:[self.collectionView.dataSource senderDisplayName]
+                            date:[NSDate date]];
+    }
+    else {
+        [self didPressAccessoryButton:sender];
+    }
+}
+
+
 - (NSString *)jsq_currentlyComposedMessageText
 {
     //  auto-accept any auto-correct suggestions
