@@ -118,6 +118,7 @@
      *  Note: this feature is mostly stable, but still experimental
      */
     self.collectionView.collectionViewLayout.springinessEnabled = [NSUserDefaults springinessSetting];
+    self.showTypingIndicator = true;
 }
 
 
@@ -430,6 +431,10 @@
 - (void)collectionView:(JSQMessagesCollectionView *)collectionView didDeleteMessageAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.demoData.messages removeObjectAtIndex:indexPath.item];
+}
+    
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForEventMessageAtIndexPath:(NSIndexPath *)indexPath {
+    return 10.0;
 }
 
 - (id<JSQMessageBubbleImageDataSource>)collectionView:(JSQMessagesCollectionView *)collectionView messageBubbleImageDataForItemAtIndexPath:(NSIndexPath *)indexPath
